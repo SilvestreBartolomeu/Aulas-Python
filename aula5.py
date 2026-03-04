@@ -1,45 +1,45 @@
-def conta_divisores(numero: int) -> int:
-  divisor = 0
-  for i in range(1, numero + 1):
-    if numero%i == 0:
-      divisor+=1
-  return divisor
+#while True:
+ #letra = input()
+  #print(f"Código: {ord(letra)}") 
+  #retorna o numero Unicode de cada letra
 
-def soma_divisores(numero: int) -> int:
-  soma = 0
-  for i in range(1, numero):
-    if numero%i == 0:
-      soma += i
-  return soma
+#for i in range(0,3000):
+  #print(chr(i), end=" ")
+  #retorna os primeiros 3000 characteres da tabela Unicode
+  #end=" " faz o print colocar um espaço apos cada saida em vez de pular linha
 
-def verifica_numeros_amigos(a: int, b: int) -> bool:
-  if a == soma_divisores(b) and b == soma_divisores(a):
-    return True
-  return False
+#fruta = "Banana"
+#i = 0
+#while i<len(fruta):
+  #print(fruta[i], ord(fruta[i]))
+  #i+=1
+  #len() retorna o número de caracteres de uma string
 
-def conta_par_numeros_amigos(de: int, ate: int) -> int:
-  pares = 0
-  for i in range(de, ate + 1):
-    for j in range(i + 1, ate + 1):
-      if verifica_numeros_amigos(i, j):
-        pares += 1
-  return pares
+#fruta[0] caracter 0 da string
+#fruta[0:4]
+#fruta[2:]
+#fruta[inicio:fim:passo]
+#fruta[len(fruta) - 1] retorna ultima letra
+#fruta.title() primeira letra de cada palavra maiuscula
+#fruta.upper() todas as letras maiusculas
+#fruta.lower() todas as letras minusculas
+#fruta.strip() tira espaços
+#fruta.rstrip() tira espaço da direita
+#fruta.lstrip() tira espaco da esquerda
+#fruta.replace("nana", "ga") troca parte da string
+#fruta.replace("a", "X") troc todos os "a" da string por "X"
+#"12345".isdigt() verifica se todos os caracteres são numeros/digitos
+#"fruta" + "verde" retorna "frutaverde"
+#"B" * 5 retorna "BBBBB"
 
-def primo(numero):
-  if numero < 2:
-    return False
-  for i in range(2, int(numero**0.5) + 1):
-    if numero%i == 0:
-      return False
-  return True
+frase = " Hidrogenio liquido" 
+print(frase.split()) #transforma em uma lista
+print(frase.split(" "))
 
-def conta_decomposicao_primos(numero: int) -> int:
-  quantidade_primo = 0
-  for i in range(2, numero):
-    if primo(i):
-      if numero%i == 0:
-        quantidade_primo += 1
-        while numero%i == 0:
-          numero //= i
+def gerar_emoticons():
+  prefixo = ":-"
 
-  return quantidade_primo
+  for letra in ")(D*ox":
+    print(prefixo+letra)
+
+print(gerar_emoticons())
