@@ -1,3 +1,11 @@
+#Faça um laço principal que vai de um até o primeiro número fornecido (inclusive).
+#Faça um laço secudário dentro do principal que vai do segundo núemero fornecido até 1 (inclusive), com contagem decrescente.
+#Para cada combinação dos laços acima, some o primeiro número com o segundo número:
+#Se for número primo, não faça nada (ignore a iteração atual).
+#Senão, imprima o par de valores atuais da iteração.
+#O terceiro valor recebido serve para limitar a quantidade de linha de saída, ou seja, a quantidade de pares impressos não pode exceder o terceiro valor.
+#Caso todos os pares forem processados e não atingir o limite, imprimir como última linha a quantidade de linhas restantes.
+
 def primo(n):
   if n<2:
     return False
