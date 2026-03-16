@@ -1,48 +1,30 @@
-def inverte_caracteres(frase):
-  inversao = ""
-  for i in range(len(frase) - 1, -1, -1):
-    inversao += frase[i]
-  return inversao
-# Retorna a palavra/frase invertida.
-# Dica: Faça um laço decrescente copiando o texto original para uma string.
-# Exemplo 1:
-# Entrada: ABCDEF
-# Saída: FEDCBA
-# Exemplo 2:
-# Entrada: Universidade Federal do ABC
-# Saída: CBA od laredeF edadisrevinU
+n = int(input())
+Lista = list()
 
-def inverte_caracteres_em_palavras(frase):
-  inversao = ""
-  palavra = ""
-  for i in range(len(frase)):
-    if frase[i] != " ":
-      palavra += frase[i]
-    else:
-      inversao += palavra[::-1] + " "
-      palavra = ""
-  inversao += palavra[::-1]
-  return inversao
-# Retorna a frase apenas com as palavras invertidas.
-# A ordem das palavras são preservadas.
-# Dica: faça um laço até o fim da palavra (identifcado por espaço ou final).
-# Utilize esta inforamção para extrair e inverter a palavra.
-# Exemplo 1:
-# Entrada: ABC DEF GHI
-# Saída: CBA FED IHG
-# Exemplo 2:
-# Entrada: Arara voa leve
-# Saída: ararA aov evel
+#cria lista numerica
+for i in range(n):
+  Lista.append(int(input()))
 
-def inverte_palavras(frase):
-  inversao = inverte_caracteres_em_palavras(inverte_caracteres(frase))
-  return inversao
-# Retorna as palavras invertidas, mas não os caracteres.
-# Dica: faça um laço decrescente até o início da plavra.
-# Utilize esta informação para copiar a palavra para um novo texto.
-# Exemplo 1:
-# Entrada: ABC DEF GHI
-# Saída: GHI DEF ABC
-# Exemplo 2:
-# Entrada: Hoje não chove
-# Saída: chove não Hoje
+print(Lista)
+
+print(len(Lista)) #tamanho
+print(min(Lista)) #valor minimo
+print(max(Lista)) #valor maximo
+print(sum(Lista)) #soma dos valores
+
+Lista2 = [99, 55, 66, 33, 99, 44, 11]
+
+Lista2.sort() #ordena a lista em ordem crescente
+print(Lista2)
+
+Lista2.reverse() #reverte a lista
+print(Lista2)
+
+frase = input()
+Lista3 = list()
+
+#cria lista de palavras
+for elemento in frase.split(" "):
+  Lista3.append(elemento)
+
+print(Lista3)

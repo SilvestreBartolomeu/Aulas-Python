@@ -1,45 +1,38 @@
-#while True:
- #letra = input()
-  #print(f"Código: {ord(letra)}") 
-  #retorna o numero Unicode de cada letra
+frutas = ["banana", "laranja", "limão", "abacaxi"]
+frutas2 = list(frutas)
 
-#for i in range(0,3000):
-  #print(chr(i), end=" ")
-  #retorna os primeiros 3000 characteres da tabela Unicode
-  #end=" " faz o print colocar um espaço apos cada saida em vez de pular linha
+print(frutas[0], frutas[-1])
 
-#fruta = "Banana"
-#i = 0
-#while i<len(fruta):
-  #print(fruta[i], ord(fruta[i]))
-  #i+=1
-  #len() retorna o número de caracteres de uma string
+frutas[1] = "melancia"
+#adiciona um objeto no lugar de outro objeto dentro da lista
+print(frutas[1])
 
-#fruta[0] caracter 0 da string
-#fruta[0:4]
-#fruta[2:]
-#fruta[inicio:fim:passo]
-#fruta[len(fruta) - 1] retorna ultima letra
-#fruta.title() primeira letra de cada palavra maiuscula
-#fruta.upper() todas as letras maiusculas
-#fruta.lower() todas as letras minusculas
-#fruta.strip() tira espaços
-#fruta.rstrip() tira espaço da direita
-#fruta.lstrip() tira espaco da esquerda
-#fruta.replace("nana", "ga") troca parte da string
-#fruta.replace("a", "X") troc todos os "a" da string por "X"
-#"12345".isdigt() verifica se todos os caracteres são numeros/digitos
-#"fruta" + "verde" retorna "frutaverde"
-#"B" * 5 retorna "BBBBB"
+frutas.append("pera")
+#adiciona um novo objeto
+print(frutas)
 
-frase = " Hidrogenio liquido" 
-print(frase.split()) #transforma em uma lista
-print(frase.split(" "))
+frutas.remove("pera")
+#remove um objeto
+print(frutas)
 
-def gerar_emoticons():
-  prefixo = ":-"
+del frutas[3]
+#remove um objeto de uma certa posição
+print(frutas)
 
-  for letra in ")(D*ox":
-    print(prefixo+letra)
+frutas.pop()
+#remove ultimo elemento da lista
+print(frutas)
 
-print(gerar_emoticons())
+#da mesma forma que o len retorna o numero de caracteres de uma string,
+#ele retorna o numero de objetos na lista
+print(f"{len(frutas)} frutas")
+
+frutas.clear()
+#limpa a lista
+print(frutas)
+
+print(frutas2)
+
+frutas3 = frutas2 + frutas2
+#soma listas
+print(frutas3)
