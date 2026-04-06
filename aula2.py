@@ -1,18 +1,10 @@
 import random
 
-num_i=10
-num_f=5.2
-num_c=1j
+random.random() #gera numero entre 0 e 1
 
-num_r = [
-    random.randrange(0,59),
-    random.randrange(0,59),
-    random.randrange(0,59),
-    random.randrange(0,59),
-    random.randrange(0,59),
-    random.randrange(0,59)
-    ]
+random.randint(1, 10) #inclui as duas extremidades
 
-x = num_r
+random.randrange(1, 10) #nao inclui o 10
 
-print(f"Valor: {x} - Tipo: {type(x)}")
+Lista = [10, 20, 30, 40, 50]
+random.shuffle(Lista) #embaralha uma lista
